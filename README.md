@@ -1,12 +1,10 @@
 # SeoWebApllication
-
+---
 Introducing a responsive web application that gives you feedback on your SEO by simply entering the address of a blog post.
-
 
 ---
 
-
-> To do list
+## To do list
 
 1. function module
     - signUp
@@ -34,7 +32,7 @@ Introducing a responsive web application that gives you feedback on your SEO by 
     - Limiting the number of uses (?)
     - User url caching (?)
     - Select a search engine (?)
-
+---
 2. Tech Stacks
     - Language
         - Java
@@ -58,40 +56,38 @@ Introducing a responsive web application that gives you feedback on your SEO by 
     - Container
         - Docker
     - CI/CI (?)
-        - 
     - Security and authentication
         - Spring security
     - Monitoring and logging (?)
-        - AWS
     - IDE
         - IntelliJ IDEA
-
+---
 3. Work Breakdown Structure
-
+---
 4. Entity-Relationship Diagram
-
+---
 5. Design CodeStructure
     - SpringBoot illustration
     - Set up each class relationship
-
-5. Minimum Viable Product
-
-6. Test Driven Development or Code Refactoring
-
+---
+6. Minimum Viable Product
+---
+7. Test Driven Development or Code Refactoring
 
 ---
+---
 
-> Algorithm
+## Algorithm
 
 1. chatGPT api
 2. 
 
-
+---
 ---
 
 
 
-> Progress
+## Progress
 
 - 2024.02.04 Project Start
 

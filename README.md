@@ -1,4 +1,4 @@
-# SeoWebApllication
+# SeoWebApplication
 ---
 Introducing a responsive web application that gives you feedback on your SEO by simply entering the address of a blog post.
 

@@ -1,4 +1,4 @@
-# SeoWebApllication
+# SeoWebApplication
 ---
 Introducing a responsive web application that gives you feedback on your SEO by simply entering the address of a blog post.
 
@@ -6,7 +6,7 @@ Introducing a responsive web application that gives you feedback on your SEO by 
 
 ## To do list
 
-1. function module
+1. Function Module
     - signUp
         - Simple module
         - Google login
@@ -63,12 +63,15 @@ Introducing a responsive web application that gives you feedback on your SEO by 
         - IntelliJ IDEA
 ---
 3. Work Breakdown Structure
+- ![Work Breakdown Structure](https://tistory4.daumcdn.net/tistory/6883521/skin/images/WBS.png)
 ---
 4. Entity-Relationship Diagram
+- ![Entity-Relationship Diagram](https://tistory3.daumcdn.net/tistory/6883521/skin/images/Entity-Relationship%20Diagram)
 ---
 5. Design CodeStructure
     - SpringBoot illustration
     - Set up each class relationship
+- ![Design CodeStructure](https://tistory2.daumcdn.net/tistory/6883521/skin/images/Coding_Structure.png)
 ---
 6. Minimum Viable Product
 ---

@@ -8,3 +8,17 @@
 2024-02-05T23:35:43.604+09:00  WARN 23612 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
 2024-02-05T23:35:43.651+09:00  INFO 23612 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
 2024-02-05T23:35:43.661+09:00  INFO 23612 --- [main] com.seo.demo.DemoApplication             : Started DemoApplication in 1.635 seconds (process running for 1.947)
+2024-02-05T23:49:35.794+09:00  INFO 24614 --- [main] com.seo.demo.DemoApplication             : Starting DemoApplication using Java 17.0.9 with PID 24614 (/home/wntdev/Desktop/dev/SeoWebApllication/demo/out/production/classes started by wntdev in /home/wntdev/Desktop/dev/SeoWebApllication/demo)
+2024-02-05T23:49:35.796+09:00  INFO 24614 --- [main] com.seo.demo.DemoApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-02-05T23:49:36.626+09:00  INFO 24614 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-05T23:49:36.637+09:00  INFO 24614 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-05T23:49:36.638+09:00  INFO 24614 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-05T23:49:36.691+09:00  INFO 24614 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-05T23:49:36.691+09:00  INFO 24614 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 844 ms
+2024-02-05T23:49:36.786+09:00  INFO 24614 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-02-05T23:49:36.979+09:00  WARN 24614 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-02-05T23:49:37.028+09:00  INFO 24614 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-05T23:49:37.039+09:00  INFO 24614 --- [main] com.seo.demo.DemoApplication             : Started DemoApplication in 1.699 seconds (process running for 2.028)
+2024-02-05T23:49:39.447+09:00  INFO 24614 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-05T23:49:39.447+09:00  INFO 24614 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-05T23:49:39.448+09:00  INFO 24614 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

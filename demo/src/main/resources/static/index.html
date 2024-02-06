@@ -19,11 +19,46 @@
         p {
             color: #666;
         }
+
+        .form-container {
+            margin-top: 30px;
+        }
+
+        .form-container input[type="url"] {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .form-container input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #d6984b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #e08616;
+        }
     </style>
 </head>
 <body>
 <h1>Welcome to SEO Website!</h1>
 <p>This is a simple welcome page.</p>
 <p>Coming soon!</p>
+
+<div class="form-container">
+    <form action="submit-url" method="post">
+        <input type="url" name="url" placeholder="Enter URL">
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
 </body>
 </html>

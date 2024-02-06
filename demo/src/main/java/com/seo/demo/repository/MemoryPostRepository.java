@@ -9,14 +9,6 @@ import java.util.*;
 @Repository
 public class MemoryPostRepository implements PostRepository{
 
-    /*
-    private Long pkId;
-    private String url;
-    private Integer rank;
-    private Float loadSpeed;
-    private String comment;
-    */
-
     private long sequence = 0L;
     private static Map<Long, Post> storage = new HashMap<>();
 

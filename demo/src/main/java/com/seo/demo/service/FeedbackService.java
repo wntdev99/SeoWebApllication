@@ -5,11 +5,11 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
-import java.net.HttpURLConnection;
 
 import java.io.IOException;
+import java.net.HttpURLConnection;
 import java.net.URL;
+
 
 @Service
 public class FeedbackService {

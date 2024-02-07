@@ -2,11 +2,10 @@ package com.seo.demo.repository;
 
 
 import com.seo.demo.domain.Post;
-import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-@Repository
+
 public class MemoryPostRepository implements PostRepository{
 
     private long sequence = 0L;

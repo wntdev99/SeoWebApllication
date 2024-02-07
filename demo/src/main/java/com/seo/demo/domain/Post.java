@@ -1,9 +1,16 @@
 package com.seo.demo.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Post {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long pkId;
     private String url;
-    private Integer rank;
+    private Integer searchRank;
     private Long loadSpeed;
     private String comment;
 
@@ -25,11 +32,11 @@ public class Post {
     }
 
     public Integer getRank() {
-        return rank;
+        return searchRank;
     }
 
     public void setRank(Integer rank) {
-        this.rank = rank;
+        this.searchRank = rank;
     }
 
     public Long getLoadSpeed() {

@@ -5,9 +5,11 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+import java.net.HttpURLConnection;
 
 import java.io.IOException;
-
+import java.net.URL;
 
 @Service
 public class FeedbackService {
@@ -18,11 +20,11 @@ public class FeedbackService {
 
         // Meta tag title
         Elements title = doc.select("title");
-        System.out.println(title);
+        //System.out.println(title);
 
         // Meta tag description
         String description = doc.select("meta[name=description]").attr("content");
-        System.out.println(description);
+        //System.out.println(description);
 
         // HTML 본문 (티스토리 기준)
         Elements elementsBody = doc.select(".tt_article_useless_p_margin");
@@ -32,10 +34,55 @@ public class FeedbackService {
         for (Element link : linkElements) {
             String href = link.attr("href");
             String linkText = link.text();
-            System.out.println("Link: " + linkText + " (" + href + ")");
+            //System.out.println("Link: " + linkText + " (" + href + ")");
         }
 
         return "현재 SEO를 정말 잘 하셨습니다.";
+    }
+
+    public Integer rankFeedback(String keyword, String url) throws IOException {
+        String searchEngineUrl = "https://www.google.com/search?q=" + keyword;
+        Document doc = Jsoup.connect(searchEngineUrl).get();
+        Elements elementsBody = doc.select("a[jsname=UWckNb]");
+        int index = 0;
+        int rank = 9;
+        for (Element link : elementsBody) {
+            index ++;
+            String href = link.attr("href");
+            if (url.equals(href)) {
+                rank = index;
+                break;
+            }
+        }
+        return rank;
+    }
+
+
+    public Long pageLoadTimeMeasurement(String url) {
+        long loadTime = 0L;
+        try {
+            long startTime = System.currentTimeMillis();
+
+            // HTTP 요청 보내기
+            HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+            connection.setRequestMethod("GET");
+            int responseCode = connection.getResponseCode();
+
+            long endTime = System.currentTimeMillis();
+
+            if (responseCode == HttpURLConnection.HTTP_OK) {
+                loadTime = endTime - startTime;
+
+                //System.out.println("페이지 로딩 속도: " + loadTime + "ms");
+            } else {
+                System.out.println("HTTP 요청 실패: " + responseCode);
+            }
+
+            connection.disconnect(); // 연결 종료
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return loadTime;
     }
 
 }

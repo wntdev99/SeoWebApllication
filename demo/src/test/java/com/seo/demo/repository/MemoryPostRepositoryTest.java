@@ -14,7 +14,7 @@ public class MemoryPostRepositoryTest {
         Post post = new Post();
         post.setUrl(TEST_URL);
         post.setRank(3);
-        post.setLoadSpeed(0.1);
+        post.setLoadSpeed(1L);
         post.setComment("This paper is very good");
         assertThat(post).isEqualTo(memoryPostRepository.savePost(post));
     }

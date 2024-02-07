@@ -4,7 +4,7 @@ public class Post {
     private Long pkId;
     private String url;
     private Integer rank;
-    private Double loadSpeed;
+    private Long loadSpeed;
     private String comment;
 
 
@@ -32,11 +32,11 @@ public class Post {
         this.rank = rank;
     }
 
-    public Double getLoadSpeed() {
+    public Long getLoadSpeed() {
         return loadSpeed;
     }
 
-    public void setLoadSpeed(Double loadSpeed) {
+    public void setLoadSpeed(Long loadSpeed) {
         this.loadSpeed = loadSpeed;
     }
 

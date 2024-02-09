@@ -24,11 +24,15 @@ public class JpaPostRepository implements PostRepository{
 
     @Override
     public Optional<Post> loadPost(String url) {
-        List<Post> result = em.createQuery("select p from Post p where p.url = url", Post.class)
+        // Java Persistence Query Language 사용
+        List<Post> result = em.createQuery("select p from Post p where p.url = :url", Post.class)
                 .setParameter("url", url)
                 .getResultList();
+
         return result.stream().findAny();
     }
+
+
 
     @Override
     public List<Post> loadAllPost() {

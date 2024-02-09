@@ -15,27 +15,32 @@ import java.net.URL;
 public class FeedbackService {
 
     public String commentFeedback(String url) throws IOException {
-        // HTML 전체
-        Document doc = Jsoup.connect(url).get();
+        try {
+            // HTML 전체
+            Document doc = Jsoup.connect(url).get();
 
-        // Meta tag title
-        Elements title = doc.select("title");
-        //System.out.println(title);
+            // Meta tag title
+            Elements title = doc.select("title");
+            //System.out.println(title);
 
-        // Meta tag description
-        String description = doc.select("meta[name=description]").attr("content");
-        //System.out.println(description);
+            // Meta tag description
+            String description = doc.select("meta[name=description]").attr("content");
+            //System.out.println(description);
 
-        // HTML 본문 (티스토리 기준)
-        Elements elementsBody = doc.select(".tt_article_useless_p_margin");
+            // HTML 본문 (티스토리 기준)
+            Elements elementsBody = doc.select(".tt_article_useless_p_margin");
 
-        // HTML 본문에 있는 링크
-        Elements linkElements = elementsBody.select("a");
-        for (Element link : linkElements) {
-            String href = link.attr("href");
-            String linkText = link.text();
-            //System.out.println("Link: " + linkText + " (" + href + ")");
+            // HTML 본문에 있는 링크
+            Elements linkElements = elementsBody.select("a");
+            for (Element link : linkElements) {
+                String href = link.attr("href");
+                String linkText = link.text();
+                //System.out.println("Link: " + linkText + " (" + href + ")");
+            }
+        } catch (Exception e) {
+            return "평가할 수 없는 URL입니다. 다른 URL을 입력해주세요.";
         }
+
 
         return "현재 SEO를 정말 잘 하셨습니다.";
     }
@@ -60,11 +65,13 @@ public class FeedbackService {
 
     public Long pageLoadTimeMeasurement(String url) {
         long loadTime = 0L;
+        HttpURLConnection connection = null; // 연결 변수를 초기화합니다.
         try {
             long startTime = System.currentTimeMillis();
 
             // HTTP 요청 보내기
-            HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+            URL requestUrl = new URL(url);
+            connection = (HttpURLConnection) requestUrl.openConnection();
             connection.setRequestMethod("GET");
             int responseCode = connection.getResponseCode();
 

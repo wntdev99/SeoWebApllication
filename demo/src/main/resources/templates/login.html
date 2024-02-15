@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .form-container {
+            margin-top: 30px;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="password"] {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .form-container input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .signup-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .signup-button a {
+            padding: 10px 20px;
+            color: #333; /* 버튼 색상 */
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .signup-button a:hover {
+            background-color: transparent; /* 호버 시 배경색 없음 */
+            color: #666; /* 호버 시 색상 */
+        }
+    </style>
+</head>
+<body>
+<h1>Login</h1>
+
+<div class="form-container">
+    <form id="loginForm">
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <br>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <br>
+        <input type="submit" value="Login">
+    </form>
+</div>
+
+<div class="signup-button">
+    <a href="/signup">회원가입</a>
+</div>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // 폼 제출 기본 동작 방지
+
+        // 여기에 로그인 처리 로직을 추가할 수 있습니다.
+        // 이 예제에서는 단순히 팝업을 표시하고 index.html로 리디렉션합니다.
+
+        alert('로그인이 완료되었습니다.');
+        window.location.href = 'index.html'; // index.html로 리디렉션
+    });
+</script>
+
+</body>
+</html>

@@ -17,5 +17,14 @@ public class UserController {
         return "signup";
     }
 
+    @PostMapping("/api/login")
+    public String login() {
+        return "signup";
+    }
+
+    @GetMapping("/api/signup")
+    public String signup() {
+        return "signup";
+    }
 
 }

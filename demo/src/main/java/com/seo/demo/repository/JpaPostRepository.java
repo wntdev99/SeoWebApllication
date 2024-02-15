@@ -32,8 +32,6 @@ public class JpaPostRepository implements PostRepository{
         return result.stream().findAny();
     }
 
-
-
     @Override
     public List<Post> loadAllPost() {
         return em.createQuery("select p from Post as p", Post.class)

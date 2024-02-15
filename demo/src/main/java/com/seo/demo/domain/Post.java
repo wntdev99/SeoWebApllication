@@ -1,9 +1,6 @@
 package com.seo.demo.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Post {
@@ -13,6 +10,10 @@ public class Post {
     private Integer searchRank;
     private Long loadSpeed;
     private String comment;
+    @ManyToOne // Post와 User의 관계를 설정하는 어노테이션
+    private User user;
+
+
 
 
     public Long getPkId() {
@@ -55,6 +56,12 @@ public class Post {
         this.comment = comment;
     }
 
+    public User getUser() {
+        return user;
+    }
 
+    public void setUser(User user) {
+        this.user = user;
+    }
 
 }
